@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  web:
+    image: unlockwebchat
+    build:
+      context: .
+      dockerfile: ./Dockerfile 
+    ports:
+     - "80:89"
+    networks:
+     - unlockpa_net
+
+networks:
+  unlockpa_net:
+    external: true
+
